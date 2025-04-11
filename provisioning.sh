@@ -8,7 +8,7 @@ set -eo pipefail
 
 printf "\nGetting User Data\n"
 vastai cloud copy --src /workspace/kohya_ss/ --dst /workspace/kohya_ss/ --transfer "Cloud To Instance" --connection $VAST_CONNECTION_ID --api-key $VAST_API_KEY --instance ${VAST_CONTAINERLABEL:2}
-echo "vastai cloud copy --src /workspace/kohya_ss/ --dst /workspace/kohya_ss/ --transfer \"Instance to Cloud\" --connection $VAST_CONNECTION_ID --api-key $VAST_API_KEY --instance ${VAST_CONTAINERLABEL:2} --update" > /workspace/cronjob.sh
+echo "vastai cloud copy --src /workspace/kohya_ss/ --dst /workspace/kohya_ss/ --transfer \"Instance To Cloud\"--connection $VAST_CONNECTION_ID --api-key $VAST_API_KEY --instance ${VAST_CONTAINERLABEL:2} --update" > /workspace/cronjob.sh
 chmod +x /workspace/cronjob.sh
 crontab -l > /tmp/current_cron 
 echo "*/10 * * * * /workspace/cronjob.sh" >>  /tmp/current_cron
