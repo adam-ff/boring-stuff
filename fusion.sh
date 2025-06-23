@@ -12,5 +12,5 @@ cd facefusion
 python install.py --onnxruntime cuda
 conda deactivate
 source $HOME/miniconda3/bin/activate facefusion
-wget $S_URL -O /workspace/facefusion/facefusion/$S_FILE
+wget $S_URL -O "/workspace/facefusion/facefusion/${S_FILE}"
 python facefusion.py run
