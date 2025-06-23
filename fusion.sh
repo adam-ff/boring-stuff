@@ -5,7 +5,7 @@ source $HOME/miniconda3/bin/activate
 conda init --all
 source "$HOME/.bashrc"
 conda create --name facefusion python=3.12 pip=25.0
-source $HOME/miniconda3/bin/activate facefusion
+source $HOME/miniconda3/bin/activate facefusion -y
 conda install conda-forge::cuda-runtime=12.8.1 conda-forge::cudnn=9.8.0.87 -y  
 git clone https://github.com/facefusion/facefusion 
 cd facefusion
