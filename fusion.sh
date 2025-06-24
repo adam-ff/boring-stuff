@@ -23,6 +23,12 @@ git clone https://github.com/facefusion/facefusion
 cd facefusion
 python install.py --onnxruntime cuda
 
-# Download file and run
+# Download patch
 wget "$S_URL" -O "${S_FILE}"
-python facefusion.py run
+wget https://raw.githubusercontent.com/adam-ff/boring-stuff/refs/heads/main/target.py -O /workspace/facefusion/facefusion/uis/components/target.py
+
+#supervisord
+wget https://raw.githubusercontent.com/adam-ff/boring-stuff/refs/heads/main/facefusion.sh -O /opt/supervisor-scripts/facefusion.sh
+wget https://raw.githubusercontent.com/adam-ff/boring-stuff/refs/heads/main/facefusion.conf -O /etc/supervisor/conf.d/facefusion.conf
+supervisorctl reload
+
