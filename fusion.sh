@@ -30,5 +30,6 @@ wget https://raw.githubusercontent.com/adam-ff/boring-stuff/refs/heads/main/targ
 #supervisord
 wget https://raw.githubusercontent.com/adam-ff/boring-stuff/refs/heads/main/facefusion.sh -O /opt/supervisor-scripts/facefusion.sh
 wget https://raw.githubusercontent.com/adam-ff/boring-stuff/refs/heads/main/facefusion.conf -O /etc/supervisor/conf.d/facefusion.conf
+chmod +x /opt/supervisor-scripts/facefusion.sh
 supervisorctl reload
 
